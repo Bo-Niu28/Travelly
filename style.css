@@ -1,0 +1,316 @@
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 10vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* nav style */
+header {
+  background-color: #131c27;
+  position: sticky;
+  top: 0%;
+  z-index: 1000;
+}
+
+.header_flex {
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h2 {
+  padding: 1rem 0;
+  color: white;
+  font-family: "Pacifico", cursive;
+  flex-grow: 3;
+  flex-basis: 40rem;
+}
+.navbar {
+  flex-grow: 1;
+  flex-basis: 40rem;
+}
+
+.navbar__list {
+  padding: 1em 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__item + .navbar__item {
+  margin-left: 2rem;
+}
+
+/* hero style */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+    url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__text {
+  min-height: 92vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__text p {
+  padding: 3rem;
+  font-size: 3rem;
+}
+
+.hero__text button {
+  font-size: 2rem;
+  padding: 1em 2em;
+  border: none;
+  background-color: rgb(132, 164, 233);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: ease-out 300ms;
+}
+
+.hero__text button:hover {
+  background-color: rgb(47, 59, 83);
+}
+
+/* Location section style */
+.location {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+    url(/img/new-york-page.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.location__text {
+  width: 60%;
+}
+
+.location__text-head {
+  text-decoration: underline;
+  margin: 2rem 0;
+}
+
+.location__text-body {
+  background: linear-gradient(rgb(54, 50, 50), rgb(102, 70, 79));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.move-cloud_1 {
+  animation: cloudAnimation 6s infinite alternate ease-in-out;
+}
+.move-cloud_2 {
+  animation: cloudAnimation 6s infinite alternate ease-in-out;
+  top: 15%;
+  right: -5%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* Benefits section style */
+.benefits__top {
+  background-color: #343c44;
+  color: white;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.benefits__top h3 {
+  font-weight: 400;
+}
+
+.benefits__bottom {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  flex-wrap: wrap;
+}
+
+.benefits__style {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  flex: 1 1 25rem;
+  margin: 2em;
+}
+
+.benefits__bottom--logo {
+  background-color: #27394e;
+  padding: 1rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 6vh;
+}
+
+.benefits__bottom--logo img {
+  width: 50px;
+}
+
+.benefits__bottom--text {
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.benefits__bottom--text h3 {
+  text-align: center;
+}
+
+.benefits__bottom--text p {
+  width: 80%;
+  margin: 1em auto;
+}
+
+/* contact */
+.contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+    url(img/contact-mountain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343c44a9;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+.contact__card--input {
+  flex-grow: 1;
+}
+
+.contact__card--submit {
+  background-color: rgb(132, 164, 233);
+  align-self: flex-end;
+  padding: 2rem 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-top: 8rem;
+}
+
+.contact__card h2 {
+  padding: 4rem 0 6rem 0;
+}
+
+.contact__card--input input {
+  margin: 2rem;
+  padding: 1rem 5rem;
+}
+
+.submit_link {
+  color: white;
+  text-decoration: none;
+}
+
+/* footer style */
+footer {
+  background-color: rgb(47, 59, 83);
+  color: white;
+  display: flex;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem;
+}
+
+footer h2 {
+  font-family: "Pacifico", cursive;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  align-self: center;
+}
+
+li + li {
+  margin-left: 3rem;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+@media (max-width: 1000px) {
+  /* html {
+    font-size: 45%;
+  } */
+
+  header {
+    text-align: center;
+  }
+}
